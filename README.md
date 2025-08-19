@@ -4,6 +4,10 @@ A professional job application tracking system with analytics dashboard to help 
 
 **Created by:** Sumit Singh Sengar
 
+## 🎥 Demo Video
+
+**[Watch the Demo](https://drive.google.com/file/d/181HD3Cnq4fLPil1kzHNCoDp_TC8fJUtF/view?usp=sharing)** - See the application in action!
+
 ## Overview
 
 This is a full-stack web application that helps job seekers organize and track their job applications. Features include a Kanban-style board for application management, detailed analytics, and a modern, responsive interface.
