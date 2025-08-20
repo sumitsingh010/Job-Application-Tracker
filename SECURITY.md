@@ -27,7 +27,7 @@ This project uses environment variables to store sensitive configuration data li
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `MONGODB_URI` | MongoDB connection string | `mongodb+srv://user:pass@cluster.mongodb.net/db` |
+| `MONGODB_URI` | MongoDB connection string | `mongodb+srv://[username]:[password]@[cluster].mongodb.net/[database]` |
 | `JWT_SECRET` | Secret for JWT token signing | Generate with crypto.randomBytes(64) |
 | `SESSION_SECRET` | Secret for session management | Generate with crypto.randomBytes(64) |
 | `NODE_ENV` | Environment (development/production) | `production` |
