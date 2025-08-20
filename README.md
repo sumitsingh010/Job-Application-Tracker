@@ -74,14 +74,24 @@ This is a full-stack web application that helps job seekers organize and track t
    npm run install-all
    ```
 
-3. **Set up environment variables**
+3. **Set up environment variables (SECURE)**
    
-   Create a `.env` file in the backend directory:
+   **🔒 Important: Use the secure setup script**
+   ```bash
+   # Run the setup script to generate secure environment variables
+   powershell -ExecutionPolicy Bypass -File setup-env.ps1
    ```
-   PORT=5000
-   MONGODB_URI=mongodb://127.0.0.1:27017/job-tracker
-   NODE_ENV=development
+   
+   Or manually:
+   ```bash
+   # Copy the template
+   cp backend/.env.example backend/.env
+   
+   # Edit backend/.env and replace placeholders with your actual values
+   # See SECURITY.md for detailed instructions
    ```
+   
+   **⚠️ Never commit your `.env` file to version control!**
 
 4. **Start MongoDB**
    - Make sure MongoDB is running on your system
@@ -139,6 +149,22 @@ This is a full-stack web application that helps job seekers organize and track t
 - **nodemon** (3.0.2) - Development server auto-restart
 - **concurrently** (8.2.2) - Run multiple commands
 - **react-scripts** (5.0.1) - React development tools
+
+## 🔐 Security
+
+This project implements security best practices:
+
+- **Environment Variables**: Sensitive data is stored in environment variables
+- **Rate Limiting**: API endpoints are protected against abuse
+- **CORS**: Cross-origin requests are properly configured
+- **Helmet**: Security headers are automatically set
+- **Input Validation**: All inputs are validated and sanitized
+
+**Important Security Notes:**
+- Never commit `.env` files to version control
+- Use strong, unique passwords for database connections
+- Regularly rotate secrets in production
+- See `SECURITY.md` for detailed security guidelines
 
 ## API Endpoints
 
