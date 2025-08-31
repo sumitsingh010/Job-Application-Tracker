@@ -4,7 +4,13 @@ A professional job application tracking system with analytics dashboard to help 
 
 **Created by:** Sumit Singh Sengar
 
-## 🎥 Demo Video
+## � Live Demo
+
+**🚀 [View Live Application](https://job-application-tracker-0d9m.onrender.com/)** - Try it out now!
+
+> **Note:** The app may take 30-60 seconds to wake up on first visit (free hosting tier)
+
+## �🎥 Demo Video
 
 **[Watch the Demo](https://drive.google.com/file/d/181HD3Cnq4fLPil1kzHNCoDp_TC8fJUtF/view?usp=sharing)** - See the application in action!
 
@@ -60,6 +66,28 @@ A professional job application tracking system with analytics dashboard to help 
 - Environment variables for sensitive data
 - Secure JWT tokens and session management
 - Rate limiting and CORS protection
+
+## 🚀 Deployment
+
+This application is deployed on **Render** with **MongoDB Atlas** for the database.
+
+**Live URL:** [https://job-application-tracker-0d9m.onrender.com/](https://job-application-tracker-0d9m.onrender.com/)
+
+### Deployment Features:
+- ✅ Automatic deployments from GitHub
+- ✅ Production MongoDB Atlas integration  
+- ✅ Environment-based configuration
+- ✅ Professional hosting with SSL
+
+### Tech Stack (Production):
+- **Frontend Hosting:** Render (Static Files)
+- **Backend Hosting:** Render (Node.js)
+- **Database:** MongoDB Atlas (Cloud)
+- **Domain:** Custom Render subdomain
+
+---
+
+## 📋 Project Structure
 - See `SECURITY.md` for detailed guidelines
 
 ## 📄 License
