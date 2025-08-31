@@ -1,0 +1,35 @@
+{
+  "name": "job-application-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack Job Application Tracker - Created by Sumit Singh Sengar",
+  "author": "Sumit Singh Sengar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "job-tracker",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "full-stack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumitsingh010/job-application-tracker.git"
+  }
+}

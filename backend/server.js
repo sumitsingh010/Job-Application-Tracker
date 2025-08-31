@@ -57,6 +57,31 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Serve static files from React build (Production)
+if (process.env.NODE_ENV === 'production') {
+  const path = require('path');
+  
+  // Serve static files from React build
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  
+  // Handle React routing, return all requests to React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+  });
+} else {
+  // Development route
+  app.get('/', (req, res) => {
+    res.json({ 
+      message: '🚀 Job Application Tracker API',
+      status: 'Server is running!',
+      endpoints: {
+        applications: '/api/applications',
+        analytics: '/api/analytics'
+      }
+    });
+  });
+}
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -66,9 +91,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
-  res.status(404).json({ message: 'Route not found' });
+// 404 handler for API routes only
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ message: 'API route not found' });
 });
 
 app.listen(PORT, () => {
